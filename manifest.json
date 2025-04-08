@@ -9,17 +9,16 @@
   },
 
   "permissions": [
-    "storage",      // To store the time log
-    "tabs",         // To monitor URL changes and tab activity
-    "windows"       // To detect when the browser loses focus
-    // "alarms"     // Optional: For periodically saving data instead of only on exit
+    "storage",
+    "tabs",
+    "windows"
+    // "alarms" // Keep this commented OUT if not using yet, or remove
   ],
 
   "host_permissions": [
     "*://*.crunchyroll.com/*",
-    "*://*.netflix.com/watch/*", // Be more specific for Netflix if possible
+    "*://*.netflix.com/watch/*",
     "*://*.hidive.com/*"
-    // Add other relevant domains
   ],
 
   "background": {
