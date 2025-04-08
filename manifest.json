@@ -12,7 +12,6 @@
     "storage",
     "tabs",
     "windows"
-    // "alarms" // Keep this commented OUT if not using yet, or remove
   ],
 
   "host_permissions": [
