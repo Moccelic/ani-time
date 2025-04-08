@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "Anime Time Tracker",
+  "version": "0.1.0",
+  "description": "Logs time spent watching anime on various streaming sites.",
+  "icons": {
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png"
+  },
+
+  "permissions": [
+    "storage",      // To store the time log
+    "tabs",         // To monitor URL changes and tab activity
+    "windows"       // To detect when the browser loses focus
+    // "alarms"     // Optional: For periodically saving data instead of only on exit
+  ],
+
+  "host_permissions": [
+    "*://*.crunchyroll.com/*",
+    "*://*.netflix.com/watch/*", // Be more specific for Netflix if possible
+    "*://*.hidive.com/*"
+    // Add other relevant domains
+  ],
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "action": {
+    "default_icon": "icons/icon-16.png",
+    "default_title": "View Anime Time Log",
+    "default_popup": "popup.html"
+  }
+}
